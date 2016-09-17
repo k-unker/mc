@@ -370,7 +370,7 @@ static void
 found_num_update (void)
 {
     char buffer[BUF_TINY];
-    g_snprintf (buffer, sizeof (buffer), _("Found: %ld"), matches);
+    g_snprintf (buffer, sizeof (buffer), _("Found: %lu"), matches);
     label_set_text (found_num_label, buffer);
 }
 
@@ -1302,8 +1302,8 @@ do_search (WDialog * h)
                         {
                             char msg[BUF_SMALL];
                             g_snprintf (msg, sizeof (msg),
-                                        ngettext ("Finished (ignored %zd directory)",
-                                                  "Finished (ignored %zd directories)",
+                                        ngettext ("Finished (ignored %zu directory)",
+                                                  "Finished (ignored %zu directories)",
                                                   ignore_count), ignore_count);
                             status_update (msg);
                         }
